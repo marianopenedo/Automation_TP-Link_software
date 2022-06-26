@@ -62,6 +62,10 @@ def menu():
     print('---------------------------- MENU DE AUTOMAÇÃO ----------------------------------')
     print("Agora digite o nome e a senha que você quer no seu Wi-Fi!")
     ssid, senhaW = input("Digite o nome: "), input("Digite a senha: ")
+    while(len(ssid) < 2):
+        ssid = input("O nome deve ter, no mínimo, 2 caracteres!\nDigite o nome novamente: ")
+    while (len(senhaW) < 8):
+        senhaW = input("A senha deve ter, no mínimo, 8 caracteres!\nDigite a senha novamente: ")
 
     os.system("cls") or None
 
