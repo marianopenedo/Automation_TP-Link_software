@@ -10,7 +10,7 @@ def catchIp(Wifi):
     res = ''
     
     cwd = os.getcwd()
-    print(cwd)
+    # print(cwd)
     pc.copy(cwd)
 
     pc.copy(sub.check_output(['ipconfig']).decode('iso8859-1'))
@@ -58,7 +58,7 @@ def catchIp(Wifi):
         
         res = 'http://' + res
 
-    print(res)
+    # print(res)
     os.remove("%s\IpDefault.txt" %cwd)
     return [res, cwd]
 
