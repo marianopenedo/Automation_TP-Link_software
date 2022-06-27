@@ -17,7 +17,9 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
         service = Service(executable_path="%s\msedgedriver.exe" %cwd)
         driver = webdriver.Edge(service=service, options=options)
         driver.maximize_window()
-        driver.get(res)
+        # driver.get(res)
+        url = "https://emulator.tp-link.com/EMULATOR_wr940nv6_eu_Router/userRpm/LoginRpm.htm"
+        driver.get(url)
 
         time.sleep(3)
 
@@ -31,7 +33,7 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
                 driver.find_element(By.XPATH, '//*[@id="loginBtn"]').click()
                 time.sleep(3)
                 check_url = driver.current_url
-                if check_url == res:
+                if check_url == url: # res
                     continue
                 else:
                     break
@@ -46,7 +48,7 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
                 driver.find_element(By.XPATH, '//*[@id="loginBtn"]').click()
                 time.sleep(3)
                 check_url = driver.current_url
-                if check_url == res:
+                if check_url == url: # res
                     continue
                 else:
                     break
@@ -64,11 +66,11 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
                     driver.find_element(By.XPATH, '//*[@id="loginBtn"]').click()
                     time.sleep(10)
                     check_url = driver.current_url
-                    if check_url == res:
+                    if check_url == url: # res
                         continue
                     else:
                         break
-                if check_url != res:
+                if check_url != url: # res
                     break
 
         time.sleep(5)
@@ -131,7 +133,9 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
         driver = webdriver.Edge(service=service, options=options)
         time.sleep(3)
         driver.maximize_window()
-        driver.get(res)
+        # driver.get(res)
+        url = "https://emulator.tp-link.com/EMULATOR_wr845nv1_en/userRpm/LoginRpm.htm"
+        driver.get(url)
 
         time.sleep(7)
         
@@ -147,7 +151,7 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
                 driver.find_element(By.XPATH, '//*[@id="loginBtn"]').click()
                 time.sleep(10)
                 check_url = driver.current_url
-                if check_url == res:
+                if check_url == url: # res
                     continue
                 else:
                     break
@@ -164,7 +168,7 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
                 driver.find_element(By.XPATH, '//*[@id="loginBtn"]').click()
                 time.sleep(10)
                 check_url = driver.current_url
-                if check_url == res:
+                if check_url == url: # res
                     continue
                 else:
                     break
@@ -182,11 +186,11 @@ def web(login, passw, res, ssid, senhaW, model, cwd):
                     driver.find_element(By.XPATH, '//*[@id="loginBtn"]').click()
                     time.sleep(10)
                     check_url = driver.current_url
-                    if check_url == res:
+                    if check_url == url: # res
                         continue
                     else:
                         break
-                if check_url != res:
+                if check_url != url: # res
                     break
 
         driver.switch_to.frame(1)
