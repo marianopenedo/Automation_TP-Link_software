@@ -67,10 +67,9 @@ def menu():
     while (len(senhaW) < 8):
         senhaW = input("\nA senha deve ter, no mínimo, 8 caracteres!\nDigite a senha novamente: ")
 
-    os.system("cls") or None
-
-    print('---------------------------- MENU DE AUTOMAÇÃO ----------------------------------')
+    print()
     if loginBox == None and passwordBox == None:
         print("Iremos tentar o processo com as senhas padrões!")    
+    print("A automação irá começar!")
     
     return [loginBox, passwordBox, wifi, ssid, senhaW, str(model)]
